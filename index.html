@@ -1,0 +1,93 @@
+<html lang="english">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Doge for president</title>
+<style>body{background-image: -webkit-gradient(
+	linear,
+	left top,
+	left bottom,
+	color-stop(0, rgb(255, 51, 51)),
+	color-stop(1, rgb(148, 0, 0))
+);
+background-image: -o-linear-gradient(bottom, rgb(255, 51, 51) 0%, rgb(148, 0, 0) 100%);
+background-image: -moz-linear-gradient(bottom, rgb(255, 51, 51) 0%, rgb(148, 0, 0) 100%);
+background-image: -webkit-linear-gradient(bottom, rgb(255, 51, 51) 0%, rgb(148, 0, 0) 100%);
+background-image: -ms-linear-gradient(bottom, rgb(255, 51, 51) 0%, rgb(148, 0, 0) 100%);
+background-image: linear-gradient(to bottom, rgb(255, 51, 51) 0%, rgb(148, 0, 0) 100%);} #menu {display:block; background-color:#09F; transition:0.5s;} #menu td a {color:#FFF; text-decoration:none; transition:0.5s;} #menu:hover { background-color:#FFF;} #menu td a:hover {color:#09F;} #picture {background-image:url(http://i.imgur.com/m0ay9Ce.jpg); background-size: cover; background-position: center center; padding-left:0%; padding-right:0%; padding-bottom:30%} #text{color:white; font-size:16pt;} #header {background-image:url(http://i.imgur.com/pWHNqPq.jpg); background-size:cover; padding-bottom:25%; background-repeat:no-repeat;};</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.bitmindo.com/dogecoin.min.js"></script>
+</head>
+<body>
+<div id="container" width="100%" height="100%">
+<div id="header" width="100%"> &nbsp; </div>
+<div align="center" width="100%" height="10%">
+<table id="menu" width="25%">
+<td><a href="javaScript:void(0);" id="home"><center>Home</center></a></td>
+<td><a href="javaScript:void(0);" id="about"><center>About</center></a></td>
+<td><a href="javaScript:void(0);" id="beliefs"><center>Beliefs</center></a></td>
+<td><a href="javaScript:void(0);" id="vote"><center>Vote</center></a></td>
+</table>
+</div>
+<hr>
+<div id="maincontent">
+<div id="picture" height="45%" width="100%">
+</div>
+<div id="text">
+It’s time for a change. It is a time for the people, and other such creatures, of this world, to fight back. It is the time for a choice. A choice that all voters and such must make. A choice that can be chosen with the flick of a switch or the press of a button. It is time to vote.
+<br />
+Hello. My name is Doge. I am running in the election to become world leader of earth. And unlike the other politicians, my goals are simple. I will fight to give all citizens of this great earth equal rights, such as the right to not take a bath, or the right to a juicy t-bone once a month. All citizens of this planet deserve these rights. If I was your world leader, I will fight for the honor and rights of the great american people.
+</div>
+</div>
+</div>
+<br>
+<hr>
+<footer style="color:white; font-style:bold; text-align:center;">Code by Owen Walters, as well as the <a href="https://github.com/meanelephant/doge4president/">Github contributors</a> and writing by his friend Joelle, Some rights reserved. Donate to <span style="font-style:italic">DHuc9AawAAKR8TfgBTk8ppJQDwYtJiqiYv</span> for assistance with doge4president! <script>
+  CoinWidgetCom.go({
+    /* make sure you update the wallet_address or you will not get your donations */
+    wallet_address: "DHuc9AawAAKR8TfgBTk8ppJQDwYtJiqiYv"
+    , currency: "dogecoin"
+    , counter: "amount"
+    , alignment: "bl"
+    , qrcode: true
+    , auto_show: false
+    , lbl_button: "Donate"
+    , lbl_address: "Tip Dogecoin to this Address:"
+    , lbl_amount: "DOGE"
+  });
+</script></footer>
+</body>
+<script>
+var votes="Sorry... broken";
+function loadThis(localuri) {
+    var oRequest = new XMLHttpRequest();
+
+    var sURL = 'http://'
+        + localuri;
+
+    oRequest.open('GET',sURL,false);
+    oRequest.send(null);
+
+    if (oRequest.status==200) return(oRequest.responseText);
+    else alert('Error executing XMLHttpRequest call!');
+}
+localuri    = "dogechain.info/chain/Dogecoin/q/getreceivedbyaddress/DHuc9AawAAKR8TfgBTk8ppJQDwYtJiqiYv";
+var coins = loadThis(localuri);
+votes = Math.floor(coins / 100);
+$( "#home" ).click(function() {
+  $( "#text" ).replaceWith( "<div id='text'>" + "It’s time for a change. It is a time for the people, and other such creatures, of this world, to fight back. It is the time for a choice. A choice that all voters and such must make. A choice that can be chosen with the flick of a switch or the press of a button. It is time to vote. <br /> Hello. My name is Doge. I am running in the election to become world leader of earth. And unlike the other politicians, my goals are simple. I will fight to give all citizens of this great earth equal rights, such as the right to not take a bath, or the right to a juicy t-bone once a month. All citizens of this planet deserve these rights. If I was your world leader, I will fight for the honor and rights of the great american people." + "</div>" );
+$( "#picture" ).css("background-image", "url(http://i.imgur.com/m0ay9Ce.jpg)");
+});
+$( "#about" ).click(function() {
+  $( "#text" ).replaceWith( "<div id='text'>" + "<img src='http://i.imgur.com/MKEHkhs.png' /> I grew up as a humble, and troubled dog, born and raised on a puppy mill. When the mill closed down, I and 19 other of my kind, forced to care for myself. But in 2010, I was rescued and adopted, and given a better life. Since then, many photos of me were posted online. Thanks to my dashing good looks, an internet meme was created using these pictures. From then, the internet became abuzz with my name. Soon, a political party was created, based on my ethics and politics. It is called the Shibe party. Then, during the Shibe party conference last month, I was elected to represent the party in the 2015/16 world election. I would like to thank my owner, the people who created my meme, and all of my supporters from the shibe party." + "</div>" );
+$( "#picture" ).css("background-image", "url(http://i.imgur.com/NogT1N5.jpg)");
+});
+$( "#beliefs" ).click(function() {
+  $( "#text" ).replaceWith( "<div id='text'>" + "Although some may call me a radical, I believe that the rights to citizenship should not be given to squirrels. Citizenship is a right. And squirrels, throughout history, have abused theirthis rights. They have stolen our acorns, given pur pets rabies, and made funny faces on the internet. So I believe that from now on, Squirrels shall be denied access to our world's resources, and citizenship to 80 countries on this planet. <br /> As a doge, I believe that bathtime is a criminal offense. I am currently working to write a bill to outlaw bathtime. This bill will make it so that all owners who attempt, threaten or commit forced bathtime shall be held before the court. I have a no tolerance policy for bathtime abuse. <br /> A new act that I shall introduce is the “No Doge Left Behind” act. This will ensure that slower, older dogs and doges will be able to still keep up with their owners on walks. I, near close to my death only years ago, can relate to all the doges and dogs in the world who struggle with getting up in the morning, or going out to pee. I understand the pain, heartbreak and discomfort you feel when your owner wants to go for a run, and all you want to do is nap. And I get the feeling you have when you see that cat pooping on the lawn, but you just can’t muster the energy to bark. The no Doge left behind policyact will make sure that all slow and old doges and dogs are given a free wheelbarrow, so that now your owner can push you, and finally feel that pain and exhaustion you feel whenever he wants to “Go on a hike.” Along with the wheelbarrow, all doges and dogs over the age of 8.5 will receive free pet health care, and a pack of band-aids covered in pictures of shih tzus, so that a cut or scratch cant stop you from taking that well earned walk." + "</div>" );
+$( "#picture" ).css("background-image", "url(http://i.imgur.com/PKLZPiN.png)");
+});
+$( "#vote" ).click(function() {
+  $( "#text" ).replaceWith( "<div id='text'>" + "In order to vote please donate to <span style='font-style:italic'>DHuc9AawAAKR8TfgBTk8ppJQDwYtJiqiYv</span> <a href='dogecoin:DHuc9AawAAKR8TfgBTk8ppJQDwYtJiqiYv'><img src='http://www.fallenplanetstudios.com/wordpress/wp-content/uploads/2014/02/doge-donation.png' /></a> 100 dogecoins = 1 vote. Number of votes: " + votes + " Need some dogecoins? Visit the <a href='http://www.reddit.com/r/dogecoin/'>subreddit</a> and tell them Doge sent you.</div>" );
+$( "#picture" ).css("background-image", "url(http://i.imgur.com/HMuzLKn.jpg)");
+});
+</script>
+</html>
